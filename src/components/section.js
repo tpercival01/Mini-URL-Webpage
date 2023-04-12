@@ -2,41 +2,50 @@ import illustration from "../images/illustration-working.svg";
 import bottomBG from "../images/bg-boost-desktop.svg";
 
 const Section = (props) => {
+  const test = [
+    ["https://www.frontendmentor.io", "https://reLink/k4e83r"],
+    ["https://www.frontendmentor.io", "https://reLink/k4e83r"],
+    ["https://www.frontendmentor.io", "https://reLink/k4e83r"],
+    ["https://www.frontendmentor.io", "https://reLink/k4e83r"],
+    ["https://www.frontendmentor.io", "https://reLink/k4e83r"],
+  ];
   if (props.type === "top") {
     return (
-      <div id="top-section">
+      <div id='top-section'>
         <h1>More than just shorter links</h1>
         <div>
           <p>
             Build your brand's recognition and get detailed insights on how your
             links are performing.
           </p>
-          <span id="getstarted-button">Get Started</span>
+          <span id='getstarted-button'>Get Started</span>
         </div>
         <span>
-          <img src={illustration} alt="person working at desk" />
+          <img src={illustration} alt='person working at desk' />
         </span>
       </div>
     );
   } else if (props.type === "middle") {
     return (
-      <div id="middle-section">
-        <div id="stored-link-container">
-          {props.links.map((item, key) => (
-            <div key={key} className="storedLink">
-              {item}
+      <div id='middle-section'>
+        <div id='stored-link-container'>
+          {test.map((item, key) => (
+            <div key={key} className='storedLink'>
+              <p>{item[0]}</p>
+              <p>{item[1]}</p>
+              <div id='copy-button'>Copy</div>
             </div>
           ))}
         </div>
-        <div id="statistics">
+        <div id='statistics'>
           <p>Advanced Statistics</p>
           <p>
             Track how your links are performing across the web with our advanced
             statistics dashboard.
           </p>
         </div>
-        <div id="additional-info">
-          <div id="brand" className="add-info">
+        <div id='additional-info'>
+          <div id='brand' className='add-info'>
             <p>Brand Recognition</p>
             <p>
               Boost your brand recognition with each click. Generic links don't
@@ -44,7 +53,7 @@ const Section = (props) => {
               content.
             </p>
           </div>
-          <div id="records" className="add-info">
+          <div id='records' className='add-info'>
             <p>Detailed Records</p>
             <p>
               Gain insights into who is clicking your links. Knowing when and
@@ -52,7 +61,7 @@ const Section = (props) => {
               decisions.
             </p>
           </div>
-          <div id="custom" className="add-info">
+          <div id='custom' className='add-info'>
             <p>Fully Customizable</p>
             <p>
               Improve brand awareness and content discoverability through
@@ -64,7 +73,7 @@ const Section = (props) => {
     );
   } else {
     return (
-      <div id="bottom-section" style={{ backgroundImage: `url(${bottomBG})` }}>
+      <div id='bottom-section' style={{ backgroundImage: `url(${bottomBG})` }}>
         <p>Boost your links today </p>
         <span>Get Started</span>
       </div>

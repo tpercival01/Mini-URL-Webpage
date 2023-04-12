@@ -130,7 +130,7 @@ body {
 
 #link-shorten-container {
   position: absolute;
-  width: 71%;
+  width: 75%;
   height: 150px;
   background-color: hsl(257, 27%, 26%);
   margin-top: 680px;
@@ -171,19 +171,37 @@ body {
 
 #stored-link-container {
   width: 100%;
-  margin-top: 90px;
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
 }
 
 .storedLink {
   margin-left: 200px;
-  width: 71%;
+  width: 75%;
   height: 65px;
   margin-bottom: 20px;
   border-radius: 5px;
   z-index: 2;
   background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#copy-button {
+  height: 40px;
+  width: 100px;
+  background-color: hsl(180, 66%, 49%);
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 2.5;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 /* middle section */
