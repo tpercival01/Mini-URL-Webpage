@@ -14,7 +14,7 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop screenshot](./src/images/screenshot-desktop.png)
 
 ### Links
 
