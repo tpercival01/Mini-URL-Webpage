@@ -408,9 +408,6 @@ body {
     display: block;
   }
 
-  html * {
-  }
-
   .App {
     display: flex;
     height: auto;
