@@ -7,15 +7,21 @@ import { useState } from "react";
 const App = () => {
   const [links, setLinks] = useState([]);
 
-  function handleShorten() {
+  const handleShorten = async () => {
     let link = document.getElementById("link-input").value;
-    console.log(link);
-    setLinks([...links, link]);
-  }
+
+    await fetch(`https://api.shrtco.de/v2/shortern?url=${link}`)
+      .then((response) => response.json())
+      .then((data) => {
+        const linkObj = { shorten: data["full_short_link"], original: link };
+        setLinks([...links, linkObj]);
+      });
+  };
 
   return (
     <div className="App">
       <Navbar type="top" />
+      <Navbar type="mobile" />
       <Section type="top" />
       <LinkShorten click={handleShorten} />
       <Section type="middle" links={links} />
