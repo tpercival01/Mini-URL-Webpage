@@ -2,8 +2,21 @@ import fb from "../images/icon-facebook.svg";
 import tw from "../images/icon-twitter.svg";
 import pin from "../images/icon-pinterest.svg";
 import inst from "../images/icon-instagram.svg";
+import { useState } from "react";
 
 const Navbar = (props) => {
+  const [visible, setVisible] = useState(false);
+
+  function handleMobileNavbar() {
+    if (!visible) {
+      document.getElementById("mobile-navbar").style.display = "flex";
+      setVisible((prevState) => !prevState);
+    } else {
+      document.getElementById("mobile-navbar").style.display = "none";
+      setVisible((prevState) => !prevState);
+    }
+  }
+
   if (props.type === "top") {
     return (
       <div id="top-navbar">
@@ -19,7 +32,7 @@ const Navbar = (props) => {
         </div>
       </div>
     );
-  } else {
+  } else if (props.type === "bottom") {
     return (
       <div id="bottom-navbar">
         <h1>Shortly</h1>
@@ -47,6 +60,28 @@ const Navbar = (props) => {
           <img src={tw} alt="twitter icon" />
           <img src={pin} alt="pinterest icon" />
           <img src={inst} alt="instagram icon" />
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div id="mobile-container">
+        <h1>Shortly</h1>
+        <span id="mobile-hidden" onClick={handleMobileNavbar}>
+          <div className="hamburger"></div>
+          <div className="hamburger"></div>
+          <div className="hamburger"></div>
+        </span>
+        <div id="mobile-navbar">
+          <div>
+            <p>Features</p>
+            <p>Pricing</p>
+            <p>Resources</p>
+          </div>
+          <div>
+            <p>Login</p>
+            <p id="signup">Sign Up</p>
+          </div>
         </div>
       </div>
     );
