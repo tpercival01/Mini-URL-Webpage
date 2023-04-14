@@ -10,23 +10,26 @@ const App = () => {
   const handleShorten = async () => {
     let link = document.getElementById("link-input").value;
 
-    await fetch(`https://api.shrtco.de/v2/shortern?url=${link}`)
+    await fetch(`https://api.shrtco.de/v2/shorten?url=${link}`)
       .then((response) => response.json())
       .then((data) => {
-        const linkObj = { shorten: data["full_short_link"], original: link };
+        const linkObj = {
+          shorten: data.result["full_short_link"],
+          original: link,
+        };
         setLinks([...links, linkObj]);
       });
   };
 
   return (
-    <div className="App">
-      <Navbar type="top" />
-      <Navbar type="mobile" />
-      <Section type="top" />
+    <div className='App'>
+      <Navbar type='top' />
+      <Navbar type='mobile' />
+      <Section type='top' />
       <LinkShorten click={handleShorten} />
-      <Section type="middle" links={links} />
-      <Section type="bottom" />
-      <Navbar type="bottom" />
+      <Section type='middle' links={links} />
+      <Section type='bottom' />
+      <Navbar type='bottom' />
     </div>
   );
 };

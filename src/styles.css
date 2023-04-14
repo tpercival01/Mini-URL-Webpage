@@ -82,7 +82,7 @@ body {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template: 40% 60% / 45% 60%;
+  grid-template: 45% 60% / 45% 60%;
 
   padding-left: 200px;
   padding-right: 200px;
@@ -137,7 +137,7 @@ body {
   width: 75%;
   height: 150px;
   background-color: hsl(257, 27%, 26%);
-  margin-top: 680px;
+  margin-top: 600px;
   margin-left: 200px;
   border-radius: 10px;
   display: flex;
