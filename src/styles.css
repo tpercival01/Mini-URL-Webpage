@@ -218,6 +218,15 @@ body {
   margin-right: 20px;
 }
 
+#warning {
+  display: none;
+  color: red;
+  font-style: italic;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: -830px;
+}
+
 /* middle section */
 
 #middle-section {
