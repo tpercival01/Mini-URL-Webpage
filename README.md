@@ -18,7 +18,7 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend mentor](https://www.frontendmentor.io/solutions/minify-url-webpage-react-and-mobilefirst-6wG_tExUbg)
 - Live Site URL: [Live on Render](https://minify-url-webpage.onrender.com/)
 
 ### Built with
